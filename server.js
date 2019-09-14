@@ -1,8 +1,3 @@
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config()
-}
-
-const DARKSKY_API_KEY = process.env.DARKSKY_API_KEY
 const axios = require('axios')
 const express = require('express')
 const app = express()
@@ -19,5 +14,5 @@ app.post('/weather', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('Server Started')
+    console.log('Server Started'+port)
 })
